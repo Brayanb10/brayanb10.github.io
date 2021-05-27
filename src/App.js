@@ -1,25 +1,26 @@
-import logo from './Brayan.png';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          My name is Brayan Batista and i'm going to master React!
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/Brayanb10"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check Me Out!
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+import Header from './components/Header';
+import About from './components/aboutme';
+import Resume from './components/Resume';
+import Portfolio from './components/Portfolio';
+import Testimonials from  './components/Testimonial';
+import ContactUs from './components/Contactme';
+import Footer from './components/Footer';
+import resumeData from './resumeData';
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header resumeData={resumeData}/>
+        <About resumeData={resumeData}/>
+        <Resume resumeData={resumeData}/>
+        <Portfolio resumeData={resumeData}/>
+        <Testimonials resumeData={resumeData}/>
+        <ContactUs resumeData={resumeData}/>
+        <Footer resumeData={resumeData}/>
+      </div>
+    );
+  }
 }
 
 export default App;
